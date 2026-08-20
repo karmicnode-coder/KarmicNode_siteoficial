@@ -81,10 +81,42 @@ function initTheme(){
 
 /* ==============================================================
    COUNTERS
+   ==============================================================
+   Cada [data-counter] tem:
+   - data-target="N"                        → conta de 0 até N (número fixo)
+   - data-target="years-since:YYYY-MM-DD"   → anos COMPLETOS até hoje
+   Se o alvo dinâmico for 0, mostra "< 1" para evitar mostrar "0+".
    ============================================================== */
 let counterObserver = null;
+
+function resolveCounterTarget(el){
+  const raw = el.getAttribute('data-target') || '0';
+  if(raw.indexOf('years-since:') === 0){
+    const dateStr = raw.slice('years-since:'.length);
+    const start = new Date(dateStr);
+    if(isNaN(start.getTime())) return 0;
+    const now = new Date();
+    let years = now.getFullYear() - start.getFullYear();
+    const m = now.getMonth() - start.getMonth();
+    if(m < 0 || (m === 0 && now.getDate() < start.getDate())) years--;
+    return Math.max(0, years);
+  }
+  return parseInt(raw, 10) || 0;
+}
+
 function animateCounter(el){
-  const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+  const target = resolveCounterTarget(el);
+  // Se o contador for de anos e resultar em 0 (empresa com menos de 1 ano),
+  // apagamos o "+" ao lado e escondemos o número, mostrando "< 1" no lugar
+  const wrap = el.closest('.n');
+  if(el.hasAttribute('data-years') && target === 0){
+    el.textContent = '< 1';
+    if(wrap){
+      const plus = wrap.querySelector('.plus');
+      if(plus) plus.style.display = 'none';
+    }
+    return;
+  }
   const dur = 1600;
   const start = performance.now();
   const startVal = 0;

@@ -34,13 +34,9 @@ window.i18n = (function(){
       "hero.scroll": "Deslize para explorar",
 
       // Counters
-      "count.years.n": "5",
       "count.years.l": "Anos de compromisso",
-      "count.projects.n": "120",
-      "count.projects.l": "Projetos entregues",
-      "count.clients.n": "80",
-      "count.clients.l": "Clientes satisfeitos",
-      "count.services.n": "12",
+      "count.areas.l": "Áreas de especialização",
+      "count.commitment.l": "Compromisso com o cliente",
       "count.services.l": "Serviços especializados",
 
       // About preview
@@ -339,13 +335,9 @@ window.i18n = (function(){
       "hero.stat.3.l": "Premium commitment",
       "hero.scroll": "Scroll to explore",
 
-      "count.years.n": "5",
       "count.years.l": "Years of commitment",
-      "count.projects.n": "120",
-      "count.projects.l": "Projects delivered",
-      "count.clients.n": "80",
-      "count.clients.l": "Happy clients",
-      "count.services.n": "12",
+      "count.areas.l": "Areas of expertise",
+      "count.commitment.l": "Commitment to the client",
       "count.services.l": "Specialised services",
 
       "about.eyebrow": "01 · About",
