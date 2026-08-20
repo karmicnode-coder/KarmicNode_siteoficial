@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="assets/img/hero.jpg" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/jpeg" href="assets/logo-karmic-node-hd.jpg" />
-<link rel="apple-touch-icon" href="assets/logo-karmic-node-hd.jpg" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
 <link rel="preload" as="image" href="assets/img/hero.jpg" />
 
 <!-- Styles -->
-<link rel="stylesheet" href="assets/css/karmic.css" />
+<link rel="stylesheet" href="assets/css/karmic.css?v=20260821" />
 
 <!-- JSON-LD Organization -->
 <script type="application/ld+json">
@@ -46,7 +46,7 @@
   "@type": "Organization",
   "name": "Karmic Node",
   "url": "https://karmicnode.pt",
-  "logo": "https://karmicnode.pt/assets/logo-karmic-node-hd.jpg",
+  "logo": "https://karmicnode.pt/assets/logo-karmic-node-v2.png",
   "description": "Soluções profissionais em Informática e Multimédia.",
   "email": "karmicnode@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Cartaxo", "addressCountry": "PT" },
@@ -61,14 +61,7 @@
 <div class="loader" id="loader">
   <div class="loader-inner">
     <div class="loader-mark">
-      <svg viewBox="0 0 84 84" fill="none" aria-hidden="true">
-        <!-- Escudo estilizado, monograma -->
-        <path d="M42 6 L72 16 V44 C72 60 58 71 42 78 C26 71 12 60 12 44 V16 Z"
-              stroke="#B08D57" stroke-width="1.5" fill="rgba(139,30,45,0.35)"/>
-        <line x1="42" y1="18" x2="42" y2="62" stroke="#B08D57" stroke-width="1.5"/>
-        <line x1="33" y1="28" x2="51" y2="28" stroke="#B08D57" stroke-width="1.5"/>
-        <circle cx="42" cy="42" r="3" fill="#B08D57"/>
-      </svg>
+      <img src="assets/logo-karmic-node-v2.png" alt="Karmic Node" />
     </div>
     <div class="loader-name" data-i18n="load.msg">Karmic Node</div>
     <div class="loader-bar"></div>
@@ -79,12 +72,7 @@
 <header class="site" id="siteHeader">
   <div class="brand">
     <div class="brand-mark">
-      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <path d="M20 3 L34 8 V21 C34 29 27.5 34.5 20 37 C12.5 34.5 6 29 6 21 V8 Z"
-              stroke="#B08D57" stroke-width="1.2" fill="rgba(139,30,45,0.35)"/>
-        <line x1="20" y1="9" x2="20" y2="30" stroke="#B08D57" stroke-width="1.2"/>
-        <line x1="15.5" y1="14" x2="24.5" y2="14" stroke="#B08D57" stroke-width="1.2"/>
-      </svg>
+      <img src="assets/logo-karmic-node-v2.png" alt="Karmic Node" />
     </div>
     <div class="brand-word">Karmic<b>·</b>Node</div>
   </div>
@@ -168,7 +156,7 @@
           <span class="corner tl"></span><span class="corner tr"></span>
           <span class="corner bl"></span><span class="corner br"></span>
           <div class="emblem-inner">
-            <img src="assets/logo-karmic-node-hd.jpg" alt="Karmic Node — Logotipo" />
+            <img src="assets/logo-karmic-node-v2.png" alt="Karmic Node — Logotipo" />
           </div>
         </div>
       </div>
@@ -192,19 +180,19 @@
     <div class="wrap">
       <div class="counters-grid">
         <div class="counter">
-          <div class="n"><span data-counter data-target="5">0</span><span class="plus">+</span></div>
+          <div class="n"><span data-counter data-years data-target="years-since:2026-07-21">0</span><span class="plus">+</span></div>
           <div class="rule"></div>
           <div class="l" data-i18n="count.years.l">Anos de compromisso</div>
         </div>
         <div class="counter">
-          <div class="n"><span data-counter data-target="120">0</span><span class="plus">+</span></div>
+          <div class="n"><span data-counter data-target="2">0</span></div>
           <div class="rule"></div>
-          <div class="l" data-i18n="count.projects.l">Projetos entregues</div>
+          <div class="l" data-i18n="count.areas.l">Áreas de especialização</div>
         </div>
         <div class="counter">
-          <div class="n"><span data-counter data-target="80">0</span><span class="plus">+</span></div>
+          <div class="n"><span data-counter data-target="100">0</span><span class="plus">%</span></div>
           <div class="rule"></div>
-          <div class="l" data-i18n="count.clients.l">Clientes satisfeitos</div>
+          <div class="l" data-i18n="count.commitment.l">Compromisso com o cliente</div>
         </div>
         <div class="counter">
           <div class="n"><span data-counter data-target="12">0</span></div>
@@ -983,72 +971,157 @@
   <section>
     <div class="wrap">
       <div class="legal-body">
-        <p>A presente Política de Privacidade descreve como a <strong>Karmic Node</strong> (adiante "nós" ou "a empresa") recolhe, utiliza, armazena e protege os dados pessoais dos utilizadores do website <a href="https://karmicnode.pt">karmicnode.pt</a>, em conformidade com o Regulamento (UE) 2016/679 (RGPD) e a Lei n.º 58/2019, de 8 de agosto.</p>
+        <div class="callout">
+          <strong>Última atualização:</strong> 12 de agosto de 2026 &nbsp;·&nbsp;
+          <strong>Versão:</strong> 2.0
+        </div>
+
+        <p>A presente Política de Privacidade descreve como a <strong>Karmic Node</strong> (adiante "nós" ou "a empresa") recolhe, utiliza, armazena e protege os dados pessoais dos utilizadores do website <a href="https://karmicnode.pt">karmicnode.pt</a>, em conformidade com o <strong>Regulamento (UE) 2016/679</strong> (RGPD), a <strong>Lei n.º 58/2019, de 8 de agosto</strong> (Lei de execução do RGPD em Portugal) e a <strong>Lei n.º 41/2004, de 18 de agosto</strong> (Lei da Privacidade nas Comunicações Eletrónicas).</p>
 
         <h2>1. Responsável pelo <em>tratamento</em></h2>
         <p>O responsável pelo tratamento dos dados pessoais recolhidos através deste website é:</p>
         <ul>
           <li><strong>Denominação:</strong> <span class="placeholder">[NOME LEGAL DA EMPRESA]</span></li>
-          <li><strong>NIF:</strong> <span class="placeholder">[NIF]</span></li>
-          <li><strong>Morada:</strong> Cartaxo, Portugal <span class="placeholder">[MORADA COMPLETA]</span></li>
-          <li><strong>Email:</strong> <a href="mailto:karmicnode@gmail.com">karmicnode@gmail.com</a></li>
+          <li><strong>NIF/NIPC:</strong> <span class="placeholder">[NIF/NIPC]</span></li>
+          <li><strong>Morada da sede:</strong> <span class="placeholder">[MORADA FISCAL COMPLETA]</span>, Cartaxo, Portugal</li>
+          <li><strong>Email de contacto geral:</strong> <a href="mailto:karmicnode@gmail.com">karmicnode@gmail.com</a></li>
+          <li><strong>Email para questões de privacidade:</strong> <a href="mailto:karmicnode@gmail.com?subject=Prote%C3%A7%C3%A3o%20de%20Dados">karmicnode@gmail.com</a> (com o assunto "Proteção de Dados")</li>
         </ul>
+        <p class="muted" style="font-size: 13px; margin-top: 12px;">A Karmic Node não é obrigada, à data, a designar um Encarregado de Proteção de Dados (DPO), por não se enquadrar nos critérios do artigo 37.º do RGPD. Ainda assim, garantimos resposta atempada a qualquer questão sobre proteção de dados.</p>
 
         <h2>2. Dados <em>recolhidos</em></h2>
         <p>Recolhemos apenas os dados pessoais estritamente necessários à finalidade da relação com o utilizador, nomeadamente:</p>
         <ul>
-          <li><strong>Dados de contacto fornecidos voluntariamente:</strong> nome, endereço de email e mensagem enviados através do formulário de contacto/orçamento.</li>
-          <li><strong>Dados técnicos:</strong> endereço IP, tipo de navegador, dispositivo utilizado e páginas visitadas, recolhidos automaticamente através de cookies e ferramentas de análise (ver Política de Cookies).</li>
+          <li><strong>Dados de contacto fornecidos voluntariamente:</strong> nome, endereço de email, área de interesse e mensagem enviados através do formulário de contacto/orçamento.</li>
+          <li><strong>Dados de faturação (quando aplicável):</strong> nome, morada, NIF e restantes elementos necessários à emissão de fatura, apenas após aceitação de proposta de serviço.</li>
+          <li><strong>Dados técnicos:</strong> endereço IP anonimizado, tipo de navegador, sistema operativo e páginas visitadas, recolhidos automaticamente apenas mediante consentimento (ver <a href="#cookies" data-nav-link="cookies">Política de Cookies</a>).</li>
         </ul>
+        <p>Não recolhemos <strong>dados sensíveis</strong> (categorias especiais de dados pessoais previstas no artigo 9.º do RGPD, como dados de saúde, origem étnica ou convicções religiosas).</p>
 
         <h2>3. Finalidades do <em>tratamento</em></h2>
         <p>Os dados pessoais recolhidos são tratados exclusivamente para as seguintes finalidades:</p>
         <ul>
           <li>Responder a pedidos de orçamento, informação ou contacto;</li>
-          <li>Prestar os serviços contratados;</li>
-          <li>Cumprir obrigações legais aplicáveis;</li>
-          <li>Melhorar a experiência de navegação no website (dados anónimos).</li>
+          <li>Prestar os serviços contratados e comunicar durante e após a sua execução;</li>
+          <li>Emitir faturação e cumprir obrigações fiscais e contabilísticas;</li>
+          <li>Cumprir outras obrigações legais aplicáveis;</li>
+          <li>Melhorar a experiência de navegação no website (dados anonimizados, apenas com consentimento).</li>
         </ul>
+        <p>Os dados <strong>não são utilizados para tomadas de decisão automatizadas nem para elaboração de perfis</strong>.</p>
 
         <h2>4. Fundamento <em>legal</em></h2>
-        <p>O tratamento dos seus dados baseia-se em uma ou mais das seguintes bases legais:</p>
+        <p>O tratamento dos seus dados baseia-se em uma ou mais das seguintes bases legais, previstas no artigo 6.º do RGPD:</p>
         <ul>
-          <li><strong>Consentimento</strong> expresso do titular (artigo 6.º, n.º 1, alínea a) do RGPD);</li>
-          <li><strong>Execução de contrato</strong> ou diligências pré-contratuais (alínea b));</li>
-          <li><strong>Interesse legítimo</strong> da empresa em responder ao pedido do utilizador (alínea f)).</li>
+          <li><strong>Alínea a) — Consentimento</strong> expresso do titular (cookies analíticos, comunicações comerciais opcionais);</li>
+          <li><strong>Alínea b) — Execução de contrato</strong> ou diligências pré-contratuais (pedidos de orçamento e prestação de serviços);</li>
+          <li><strong>Alínea c) — Cumprimento de obrigação legal</strong> (conservação de dados contabilísticos e fiscais);</li>
+          <li><strong>Alínea f) — Interesse legítimo</strong> da empresa em manter o histórico de comunicações e responder a pedidos de suporte.</li>
         </ul>
 
-        <h2>5. Prazo de <em>conservação</em></h2>
-        <p>Os dados recolhidos através do formulário de contacto são conservados pelo período estritamente necessário à finalidade da comunicação e, no máximo, por <strong>5 anos</strong>, salvo obrigação legal em contrário. Findo esse prazo, os dados serão eliminados de forma segura.</p>
+        <h2>5. Prazos de <em>conservação</em></h2>
+        <p>Os dados pessoais são conservados apenas pelo período estritamente necessário às finalidades do tratamento, de acordo com os prazos abaixo, findos os quais são eliminados de forma segura ou anonimizados:</p>
+        <table>
+          <thead>
+            <tr><th>Categoria de dados</th><th>Prazo</th><th>Fundamento</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dados do formulário de contacto (nome, email, mensagem)</td>
+              <td>3 anos após o último contacto</td>
+              <td>Interesse legítimo — seguimento comercial</td>
+            </tr>
+            <tr>
+              <td>Dados de faturação (contratos, faturas emitidas)</td>
+              <td>10 anos</td>
+              <td>Art.º 40.º CIVA e art.º 123.º CIRC</td>
+            </tr>
+            <tr>
+              <td>Dados contabilísticos gerais</td>
+              <td>10 anos</td>
+              <td>Art.º 40.º do Código Comercial</td>
+            </tr>
+            <tr>
+              <td>Registos de comunicações e suporte técnico</td>
+              <td>2 anos após conclusão do serviço</td>
+              <td>Interesse legítimo — garantia e histórico</td>
+            </tr>
+            <tr>
+              <td>Cookies analíticos (Google Analytics)</td>
+              <td>14 meses</td>
+              <td>Configuração padrão do GA4</td>
+            </tr>
+            <tr>
+              <td>Registo de consentimentos (cookies)</td>
+              <td>6 meses</td>
+              <td>Orientações da CNPD</td>
+            </tr>
+          </tbody>
+        </table>
 
         <h2>6. <em>Partilha</em> de dados com terceiros</h2>
-        <p>Os seus dados pessoais <strong>não são vendidos, cedidos ou partilhados</strong> com terceiros para fins comerciais. Podem, contudo, ser processados por subcontratantes que atuam em nome da Karmic Node, nomeadamente:</p>
+        <p>Os seus dados pessoais <strong>não são vendidos, cedidos ou partilhados</strong> com terceiros para fins comerciais. Podem, contudo, ser processados por subcontratantes rigorosamente selecionados que atuam em nome da Karmic Node, ao abrigo de contratos de subcontratação nos termos do artigo 28.º do RGPD:</p>
         <ul>
-          <li><strong>Formspree Inc.</strong> — processador do formulário de contacto (servidores localizados nos EUA, ao abrigo do EU-US Data Privacy Framework). Consulte a <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">política de privacidade da Formspree</a>.</li>
-          <li><strong>Google LLC (Google Analytics)</strong> — recolha anonimizada de estatísticas de utilização, quando o utilizador aceita cookies.</li>
+          <li><strong>Formspree Inc.</strong> (Estados Unidos da América) — processador do formulário de contacto. Consulte a <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">política de privacidade da Formspree</a>.</li>
+          <li><strong>Google LLC</strong> (Estados Unidos da América / União Europeia) — Google Analytics, apenas quando o utilizador aceita cookies analíticos, com IPs anonimizados.</li>
+          <li><strong>Vercel Inc.</strong> (Estados Unidos da América / rede global de servidores) — alojamento do website, com processamento apenas técnico (logs mínimos).</li>
+        </ul>
+
+        <h3>Transferências internacionais de dados</h3>
+        <p>Alguns dos subcontratantes acima têm sede fora do Espaço Económico Europeu (EEE). Nessas situações, a transferência de dados é efetuada com base nas seguintes salvaguardas legais, cumulativamente:</p>
+        <ul>
+          <li><strong>EU-US Data Privacy Framework</strong> — decisão de adequação da Comissão Europeia (Decisão de Execução (UE) 2023/1795 de 10 de julho de 2023), que reconhece um nível de proteção equivalente ao do EEE para transferências para os EUA. Pode verificar as certificações ativas em <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">dataprivacyframework.gov/list</a>.</li>
+          <li><strong>Cláusulas Contratuais Padrão (CCP)</strong> aprovadas pela Comissão Europeia (Decisão de Execução (UE) 2021/914 de 4 de junho de 2021), invocadas de forma subsidiária caso o quadro anterior seja invalidado ou não aplicável.</li>
+          <li>Avaliações de impacto sobre a transferência (TIA), sempre que exigidas pelo direito da União.</li>
         </ul>
 
         <h2>7. Direitos do <em>titular</em> dos dados</h2>
-        <p>Nos termos do RGPD, o utilizador tem, em qualquer momento, o direito de:</p>
+        <p>Nos termos dos artigos 15.º a 22.º do RGPD, o utilizador tem, em qualquer momento, o direito de:</p>
         <ul>
-          <li><strong>Aceder</strong> aos seus dados pessoais;</li>
-          <li><strong>Retificar</strong> dados inexatos ou incompletos;</li>
-          <li>Solicitar o <strong>apagamento</strong> dos dados ("direito ao esquecimento");</li>
-          <li><strong>Limitar</strong> ou <strong>opor-se</strong> ao tratamento;</li>
-          <li>Solicitar a <strong>portabilidade</strong> dos dados;</li>
-          <li><strong>Retirar o consentimento</strong> a qualquer momento;</li>
-          <li>Apresentar reclamação junto da autoridade de controlo — <a href="https://www.cnpd.pt" target="_blank" rel="noopener">Comissão Nacional de Proteção de Dados (CNPD)</a>.</li>
+          <li><strong>Acesso</strong> aos seus dados pessoais e informação sobre o respetivo tratamento;</li>
+          <li><strong>Retificação</strong> de dados inexatos ou incompletos;</li>
+          <li><strong>Apagamento</strong> ("direito ao esquecimento"), nos casos previstos;</li>
+          <li><strong>Limitação</strong> do tratamento;</li>
+          <li><strong>Oposição</strong> ao tratamento fundado em interesse legítimo;</li>
+          <li><strong>Portabilidade</strong> dos dados em formato estruturado;</li>
+          <li><strong>Retirada do consentimento</strong> a qualquer momento, sem afetar a licitude do tratamento efetuado com base no consentimento previamente prestado;</li>
+          <li>Direito de <strong>não ficar sujeito a decisões automatizadas</strong>.</li>
         </ul>
-        <p>Para exercer qualquer destes direitos, contacte-nos através de <a href="mailto:karmicnode@gmail.com">karmicnode@gmail.com</a>.</p>
 
-        <h2>8. Segurança dos <em>dados</em></h2>
-        <p>Adotamos medidas técnicas e organizativas adequadas para proteger os dados pessoais contra acesso não autorizado, perda acidental, alteração ou destruição, incluindo cifragem em trânsito (HTTPS/TLS) e acesso restrito.</p>
+        <h3>Como exercer estes direitos</h3>
+        <ul>
+          <li>Envie um pedido por email para <a href="mailto:karmicnode@gmail.com?subject=Exerc%C3%ADcio%20de%20Direitos%20RGPD">karmicnode@gmail.com</a> com o assunto "Exercício de Direitos RGPD", identificando-se e indicando o direito que pretende exercer.</li>
+          <li>A Karmic Node compromete-se a responder no <strong>prazo máximo de 1 mês</strong> a contar da receção do pedido, prorrogável por 2 meses adicionais em casos particularmente complexos, sendo o titular informado da prorrogação e das respetivas razões.</li>
+          <li>O exercício de direitos é <strong>gratuito</strong>, salvo pedidos manifestamente infundados ou excessivos, nos termos do n.º 5 do artigo 12.º do RGPD.</li>
+        </ul>
 
-        <h2>9. <em>Alterações</em> a esta política</h2>
-        <p>Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento. Todas as alterações serão publicadas nesta página com indicação da data da última atualização.</p>
+        <h3>Direito de reclamação à autoridade de controlo</h3>
+        <p>Sem prejuízo de outras vias de recurso, o titular tem o direito de apresentar reclamação junto da autoridade nacional de controlo:</p>
+        <address>
+          <strong>Comissão Nacional de Proteção de Dados (CNPD)</strong>
+          Av. D. Carlos I, 134, 1.º — 1200-651 Lisboa<br/>
+          Telefone: (+351) 213 928 400<br/>
+          Email: <a href="mailto:geral@cnpd.pt">geral@cnpd.pt</a><br/>
+          Website: <a href="https://www.cnpd.pt" target="_blank" rel="noopener">www.cnpd.pt</a>
+        </address>
+
+        <h2>8. Menores de <em>idade</em></h2>
+        <p>Os serviços da Karmic Node dirigem-se a maiores de 18 anos e a empresas. Não recolhemos deliberadamente dados de menores de 13 anos. Caso seja detetada essa situação, os dados serão eliminados de imediato. Contratações efetuadas em nome de menores devem ser feitas pelos respetivos representantes legais, que assumem a responsabilidade pelo consentimento nos termos do artigo 8.º do RGPD.</p>
+
+        <h2>9. Segurança dos <em>dados</em></h2>
+        <p>Adotamos medidas técnicas e organizativas adequadas ao risco, em conformidade com o artigo 32.º do RGPD, incluindo, sem limitação:</p>
+        <ul>
+          <li>Cifragem em trânsito através de HTTPS/TLS (certificado emitido pela Vercel);</li>
+          <li>Autenticação forte no acesso a sistemas internos;</li>
+          <li>Controlo de acessos restritos ao princípio da necessidade de saber;</li>
+          <li>Backups periódicos e planos de recuperação;</li>
+          <li>Registo de incidentes e notificação à CNPD no prazo de 72 horas, quando aplicável (art.º 33.º RGPD).</li>
+        </ul>
+
+        <h2>10. <em>Alterações</em> a esta política</h2>
+        <p>Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento. Todas as alterações serão publicadas nesta página com indicação da data da última atualização. Alterações substanciais serão comunicadas de forma proeminente e, se aplicável, mediante novo consentimento do titular.</p>
 
         <div class="legal-meta">
-          <div><span data-i18n="leg.updated">Última atualização</span>: Julho de 2026</div>
+          <div><span data-i18n="leg.updated">Última atualização</span>: 12 de agosto de 2026</div>
           <div><a href="#inicio" data-nav-link="inicio" data-i18n="leg.back">Voltar ao Início</a></div>
         </div>
       </div>
@@ -1069,13 +1142,18 @@
   <section>
     <div class="wrap">
       <div class="legal-body">
+        <div class="callout">
+          <strong>Última atualização:</strong> 12 de agosto de 2026 &nbsp;·&nbsp;
+          <strong>Versão:</strong> 2.0
+        </div>
+
         <p>Os presentes Termos e Condições regulam a utilização do website <a href="https://karmicnode.pt">karmicnode.pt</a> e a prestação de serviços pela <strong>Karmic Node</strong>. Ao aceder ou utilizar este website, o utilizador declara aceitar integralmente as presentes condições.</p>
 
         <h2>1. <em>Identificação</em></h2>
         <ul>
           <li><strong>Denominação:</strong> <span class="placeholder">[NOME LEGAL DA EMPRESA]</span></li>
-          <li><strong>NIF:</strong> <span class="placeholder">[NIF]</span></li>
-          <li><strong>Sede:</strong> Cartaxo, Portugal <span class="placeholder">[MORADA COMPLETA]</span></li>
+          <li><strong>NIF/NIPC:</strong> <span class="placeholder">[NIF/NIPC]</span></li>
+          <li><strong>Sede:</strong> <span class="placeholder">[MORADA FISCAL COMPLETA]</span>, Cartaxo, Portugal</li>
           <li><strong>Email:</strong> <a href="mailto:karmicnode@gmail.com">karmicnode@gmail.com</a></li>
         </ul>
 
@@ -1114,15 +1192,33 @@
         <h2>9. Proteção de <em>dados</em></h2>
         <p>O tratamento dos dados pessoais é regido pela nossa <a href="#privacidade" data-nav-link="privacidade">Política de Privacidade</a>, que faz parte integrante destes Termos.</p>
 
-        <h2>10. Lei aplicável e <em>foro</em></h2>
-        <p>Os presentes Termos regem-se pela lei portuguesa. Para a resolução de qualquer litígio emergente da sua interpretação ou execução, é competente o foro da comarca da sede da Karmic Node, com renúncia expressa a qualquer outro.</p>
-        <p>Nos termos da Lei n.º 144/2015, o consumidor tem direito a recorrer a entidades de resolução alternativa de litígios de consumo. Mais informações em <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">consumidor.gov.pt</a>.</p>
+        <h2>10. Livro de <em>Reclamações Eletrónico</em></h2>
+        <p>Nos termos do Decreto-Lei n.º 74/2017, de 21 de junho, os clientes-consumidores têm à sua disposição o Livro de Reclamações Eletrónico, acessível em:</p>
+        <address>
+          <strong>Livro de Reclamações Eletrónico</strong>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>
+        </address>
+        <p class="muted" style="font-size: 13px;"><em>Nota: assim que concluído o processo de adesão pela Karmic Node, será disponibilizado neste local o link direto para o Livro de Reclamações Eletrónico específico da empresa.</em></p>
 
-        <h2>11. <em>Alterações</em></h2>
-        <p>A Karmic Node reserva-se o direito de alterar estes Termos a qualquer momento. As alterações produzem efeitos a partir da sua publicação nesta página.</p>
+        <h2>11. Resolução Alternativa de <em>Litígios</em> (RAL)</h2>
+        <p>Em caso de litígio de consumo, e nos termos da Lei n.º 144/2015, de 8 de setembro, o consumidor pode recorrer, gratuitamente, à seguinte Entidade de Resolução Alternativa de Litígios de Consumo:</p>
+        <address>
+          <strong>CNIACC — Centro Nacional de Informação e Arbitragem de Conflitos de Consumo</strong>
+          Rua D. Afonso Henriques, 1 — 4700-030 Braga<br/>
+          Telefone: (+351) 253 617 604<br/>
+          Email: <a href="mailto:geral@cniacc.pt">geral@cniacc.pt</a><br/>
+          Website: <a href="https://www.cniacc.pt" target="_blank" rel="noopener">www.cniacc.pt</a>
+        </address>
+        <p>Poderá ainda consultar a rede nacional de entidades de RAL disponível em <a href="https://www.consumidor.gov.pt/parceiros-destaques/rede-de-arbitragem-de-consumo.aspx" target="_blank" rel="noopener">consumidor.gov.pt</a> e, para litígios transfronteiriços na União Europeia, a plataforma ODR da Comissão Europeia em <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+
+        <h2>12. Lei aplicável e <em>foro</em></h2>
+        <p>Os presentes Termos regem-se pela lei portuguesa. Sem prejuízo dos meios de resolução alternativa referidos no ponto anterior, para a resolução judicial de qualquer litígio emergente da sua interpretação ou execução é competente o foro da comarca da sede da Karmic Node, com renúncia expressa a qualquer outro, sem prejuízo das normas legais imperativas em matéria de foro do consumidor.</p>
+
+        <h2>13. <em>Alterações</em></h2>
+        <p>A Karmic Node reserva-se o direito de alterar estes Termos a qualquer momento. As alterações produzem efeitos a partir da sua publicação nesta página. Alterações substanciais serão comunicadas de forma proeminente.</p>
 
         <div class="legal-meta">
-          <div><span data-i18n="leg.updated">Última atualização</span>: Julho de 2026</div>
+          <div><span data-i18n="leg.updated">Última atualização</span>: 12 de agosto de 2026</div>
           <div><a href="#inicio" data-nav-link="inicio" data-i18n="leg.back">Voltar ao Início</a></div>
         </div>
       </div>
@@ -1143,6 +1239,13 @@
   <section>
     <div class="wrap">
       <div class="legal-body">
+        <div class="callout">
+          <strong>Última atualização:</strong> 12 de agosto de 2026 &nbsp;·&nbsp;
+          <strong>Versão:</strong> 2.0
+        </div>
+
+        <p>A presente Política de Cookies é elaborada em conformidade com o <strong>Regulamento (UE) 2016/679</strong> (RGPD), a <strong>Lei n.º 41/2004, de 18 de agosto</strong> (Lei da Privacidade nas Comunicações Eletrónicas), e as orientações emitidas pela <a href="https://www.cnpd.pt" target="_blank" rel="noopener">Comissão Nacional de Proteção de Dados (CNPD)</a>.</p>
+
         <h2>1. O que são <em>cookies</em>?</h2>
         <p>Cookies são pequenos ficheiros de texto que os websites colocam no dispositivo do utilizador (computador, tablet, telemóvel) para armazenar informação sobre a navegação. Servem para tornar a experiência de utilização mais eficiente e para recolher estatísticas de utilização.</p>
 
@@ -1181,7 +1284,7 @@
         <p>Para qualquer questão sobre esta Política de Cookies, contacte-nos através de <a href="mailto:karmicnode@gmail.com">karmicnode@gmail.com</a>.</p>
 
         <div class="legal-meta">
-          <div><span data-i18n="leg.updated">Última atualização</span>: Julho de 2026</div>
+          <div><span data-i18n="leg.updated">Última atualização</span>: 12 de agosto de 2026</div>
           <div><a href="#inicio" data-nav-link="inicio" data-i18n="leg.back">Voltar ao Início</a></div>
         </div>
       </div>
@@ -1197,12 +1300,7 @@
     <div class="foot-brand">
       <div class="brand">
         <div class="brand-mark">
-          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 3 L34 8 V21 C34 29 27.5 34.5 20 37 C12.5 34.5 6 29 6 21 V8 Z"
-                  stroke="#B08D57" stroke-width="1.2" fill="rgba(139,30,45,0.35)"/>
-            <line x1="20" y1="9" x2="20" y2="30" stroke="#B08D57" stroke-width="1.2"/>
-            <line x1="15.5" y1="14" x2="24.5" y2="14" stroke="#B08D57" stroke-width="1.2"/>
-          </svg>
+          <img src="assets/logo-karmic-node-v2.png" alt="Karmic Node" />
         </div>
         <div class="brand-word">Karmic<b>·</b>Node</div>
       </div>
@@ -1260,8 +1358,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/karmic.js"></script>
+<script src="assets/js/i18n.js?v=20260821"></script>
+<script src="assets/js/karmic.js?v=20260821"></script>
 
 </body>
 </html>
