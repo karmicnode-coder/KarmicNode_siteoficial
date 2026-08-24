@@ -1,5 +1,5 @@
 /* Karmic Node — App runtime
-   Router (hash), tema, cursor, parallax, contadores, cookies, form, mobile menu
+   Router (path-based, History API), tema, cursor, parallax, contadores, cookies, form, mobile menu
 ------------------------------------------------------------------------ */
 
 /* ==============================================================
@@ -34,9 +34,41 @@ function initAnalytics(){
 }
 
 /* ==============================================================
-   HASH ROUTER
+   ROUTER — path-based (History API, sem #)
    ============================================================== */
 const PAGES = ['inicio','quem-somos','informatica','multimedia','portfolio','contacto','loja','faq','privacidade','termos','cookies'];
+const KN_ROUTES = new Set(PAGES);
+
+function pathToRoute(pathname){
+  // "/quem-somos" -> "quem-somos"; "/" -> "inicio"; qualquer outro -> "inicio"
+  const seg = (pathname || '/').split('/').filter(Boolean)[0] || 'inicio';
+  return KN_ROUTES.has(seg) ? seg : 'inicio';
+}
+
+function navigate(route, opts = {}){
+  if(!KN_ROUTES.has(route)) route = 'inicio';
+  const url = route === 'inicio' ? '/' : '/' + route;
+  if(opts.replace){
+    history.replaceState({ route }, '', url);
+  } else if(location.pathname !== url){
+    history.pushState({ route }, '', url);
+  }
+  setActive(route);
+}
+
+function routeFromLocation(){
+  // Legacy: se ainda vier com #hash de bookmarks antigos, migra silenciosamente
+  if(location.hash){
+    const legacy = location.hash.replace(/^#/, '');
+    if(KN_ROUTES.has(legacy)){
+      history.replaceState({ route: legacy }, '',
+        legacy === 'inicio' ? '/' : '/' + legacy);
+      setActive(legacy);
+      return;
+    }
+  }
+  setActive(pathToRoute(location.pathname));
+}
 
 function setActive(page){
   if(!PAGES.includes(page)) page = 'inicio';
@@ -57,10 +89,8 @@ function setActive(page){
   if(page === 'inicio') resetCounters();
 }
 
-function routeFromHash(){
-  const h = (location.hash || '#inicio').replace(/^#/, '');
-  setActive(h);
-}
+// Compat: mantém a assinatura antiga usada noutros pontos do ficheiro
+function routeFromHash(){ routeFromLocation(); }
 
 /* ==============================================================
    THEME (dark/light)
@@ -404,25 +434,27 @@ function initNav(){
     if(href.startsWith('mailto:') || href.startsWith('tel:')) return;
     const target = link.getAttribute('data-nav-link');
     if(!target) return;
+    // Cmd/Ctrl-click ou middle-click: deixa o browser abrir em nova aba
+    if(e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
     e.preventDefault();
-    location.hash = '#' + target;
+    navigate(target);
   });
 
   // Brand click -> home
   document.querySelectorAll('.brand').forEach(b => {
-    b.addEventListener('click', () => location.hash = '#inicio');
+    b.addEventListener('click', (e) => { e.preventDefault(); navigate('inicio'); });
   });
 
-  window.addEventListener('hashchange', routeFromHash);
+  // Back/forward do browser
+  window.addEventListener('popstate', () => routeFromLocation());
 
-  // Initial route
-  const initial = (location.hash || '').replace(/^#/, '');
-  if(initial){
-    routeFromHash();
+  // Initial route: 1) URL atual (path ou legacy #hash), 2) localStorage, 3) inicio
+  if(location.pathname !== '/' || location.hash){
+    routeFromLocation();
   } else {
     let saved = 'inicio';
     try { saved = localStorage.getItem('kn:page') || 'inicio'; } catch(e){}
-    location.hash = '#' + saved;
+    navigate(saved, { replace: true });
   }
 
   // Header scroll state

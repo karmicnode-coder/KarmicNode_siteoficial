@@ -320,6 +320,7 @@ nav.primary a.active::after{
 /* ================ HERO ================ */
 .hero{
   min-height: 100vh;
+  min-height: 100svh;  /* iOS Safari: evita salto quando a barra desaparece */
   padding-top: 120px;
   display: flex; align-items: center;
   position: relative;
@@ -1363,10 +1364,11 @@ footer.site{
   .menu-toggle{ display: inline-block; }
   .shop-cta{ display: none; }
 
+  .hero{ flex-direction: column; } /* .wrap + .hero-meta empilham em vez de disputar espaço em linha */
   .hero .grid{ grid-template-columns: 1fr; gap: 40px; }
   .emblem{ max-width: 300px; margin: 0 auto; }
-  .hero-meta{ position: static; padding: 24px var(--pad-x); flex-direction: column; align-items: flex-start; }
-  .hero-meta .stats{ gap: 32px; }
+  .hero-meta{ position: static; width: 100%; padding: 24px var(--pad-x); flex-direction: column; align-items: flex-start; }
+  .hero-meta .stats{ gap: 32px; flex-wrap: wrap; }
 
   .counters-grid{ grid-template-columns: 1fr 1fr; }
   .counters-grid .counter:nth-child(2n){ border-right: none; }
@@ -1424,4 +1426,88 @@ footer.site{
   .clients-grid .client-cell:nth-child(2n){ border-right: none; }
   .faq-item summary{ font-size: 18px; }
   .faq-item .answer{ padding-right: 0; }
+}
+
+/* ---------- Tablet portrait (768px) — preenche o salto entre 960 e 560 ---------- */
+@media (max-width: 768px){
+  :root{ --header-h: 64px; }
+  header.site{ height: 64px; }
+  .brand-name{ font-size: 18px; letter-spacing: 0.12em; }
+  .brand-logo{ width: 34px; height: 34px; }
+
+  .hero{ padding-top: 96px; }
+  .hero h1{ font-size: clamp(40px, 9vw, 68px); line-height: 1.05; }
+  .hero .lead{ font-size: 16px; }
+  .hero .ctas{ flex-wrap: wrap; gap: 12px; }
+  .hero .ctas .btn{ flex: 1 1 auto; min-width: 0; justify-content: center; }
+
+  section{ padding: clamp(64px, 12vw, 100px) 0; }
+
+  .port-grid{ gap: 16px; }
+  .port-item.wide, .port-item.tall, .port-item.half, .port-item.third{
+    aspect-ratio: 4/3;
+  }
+
+  .team-portrait{ aspect-ratio: 4/5; }
+
+  /* stats/counters ficam legíveis */
+  .counter .num, .stats .stat .num{ font-size: clamp(36px, 7vw, 56px); }
+}
+
+/* ---------- Small phones (≤ 380px, iPhone SE / older Android) ---------- */
+@media (max-width: 380px){
+  :root{ --pad-x: 16px; }
+  h1{ font-size: clamp(34px, 10vw, 44px) !important; }
+  h2{ font-size: clamp(28px, 8vw, 36px); }
+  .hero{ padding-top: 84px; }
+  .hero .lead, .lead{ font-size: 15px; }
+  .btn{ font-size: 13px; padding: 12px 18px; }
+  .brand-name{ font-size: 16px; }
+
+  .team-info .name{ font-size: 22px; }
+  .team-info .bio{ font-size: 14px; }
+
+  /* Não colar em contactos: quebra emails/telefones longos */
+  a[href^="mailto:"], a[href^="tel:"]{ word-break: break-word; }
+}
+
+/* ---------- Landscape mobile (paisagem em telemóvel) ---------- */
+@media (max-height: 500px) and (orientation: landscape){
+  .hero{ min-height: 560px; padding-top: 88px; padding-bottom: 40px; }
+  section{ padding: 48px 0; }
+  nav.primary{ inset: 60px 0 0 0; padding: 24px var(--pad-x); overflow-y: auto; }
+}
+
+/* ---------- Safe-area (iPhone com notch/home-indicator) ---------- */
+@supports (padding: max(0px)){
+  :root{
+    --pad-x: max(clamp(20px, 4vw, 56px), env(safe-area-inset-left));
+  }
+  header.site,
+  footer.site,
+  .cookie{
+    padding-left: max(var(--pad-x), env(safe-area-inset-left));
+    padding-right: max(var(--pad-x), env(safe-area-inset-right));
+  }
+  footer.site{ padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+}
+
+/* ---------- Reduced motion (acessibilidade + preferência do sistema) ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal]{ opacity: 1 !important; transform: none !important; }
+  .hero-bg{ transform: none !important; }  /* desliga parallax */
+  .cursor-dot, .cursor-ring{ display: none !important; }
+}
+
+/* ---------- High-DPI: fotografia mais nítida em Retina ---------- */
+@media (min-resolution: 2dppx){
+  img{ image-rendering: -webkit-optimize-contrast; }
 }
